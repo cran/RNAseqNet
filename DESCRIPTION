@@ -2,8 +2,8 @@ Package: RNAseqNet
 Type: Package
 Title: Log-Linear Poisson Graphical Model with Hot-Deck Multiple
         Imputation
-Version: 0.1.0
-Date: 2017-04-19
+Version: 0.1.1
+Date: 2017-05-16
 Authors@R: c(person("Alyssa", "Imbert", role = c("aut"), email="alyssa.imbert@inra.fr"),
              person("Nathalie", "Villa-Vialaneix", role = c("aut", "cre"), email="nathalie.villa-vialaneix@inra.fr"))
 Maintainer: Nathalie Villa-Vialaneix <nathalie.villa-vialaneix@inra.fr>
@@ -16,12 +16,14 @@ Description: Infer log-linear Poisson Graphical Model with an auxiliary data
 License: GPL (>= 3)
 Repository: CRAN
 Depends: R (>= 3.1.0), ggplot2
-Imports: igraph (>= 1.0), hot.deck, PoiClaClu, glmnet
+Imports: igraph (>= 1.0), hot.deck, PoiClaClu, glmnet, methods, utils
+Suggests: BiocStyle, knitr, rmarkdown
+VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2017-04-19 13:49:29 UTC; nathalie
+Packaged: 2017-05-16 12:53:57 UTC; nathalie
 Author: Alyssa Imbert [aut],
   Nathalie Villa-Vialaneix [aut, cre]
-Date/Publication: 2017-04-19 15:51:49 UTC
+Date/Publication: 2017-05-16 14:40:26 UTC
