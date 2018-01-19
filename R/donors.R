@@ -32,9 +32,10 @@
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
-#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
-#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
+#' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
+#' hot-deck imputation for network inference from RNA sequencing data.
+#' \emph{Bioinformatics}. \doi{10.1093/bioinformatics/btx819}.}
 #'
 #' @seealso \code{\link{chooseSigma}}, \code{\link{imputedGLMnetwork}}
 #'
@@ -179,14 +180,15 @@ createDonors <- function(X, Y, sigma, seed = NULL) {
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
-#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
-#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
+#' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
+#' hot-deck imputation for network inference from RNA sequencing data.
+#' \emph{Bioinformatics}. \doi{10.1093/bioinformatics/btx819}.}
 #'
 #' @seealso \code{\link{imputeHD}}, \code{\link{chooseSigma}}
 #'
 #' @return \code{varIntra} returns a numeric value which is the average
-#' intra-donor pool variance, as described in (Imbert \emph{et al.}, 2017).
+#' intra-donor pool variance, as described in (Imbert \emph{et al.}, 2018).
 
 varIntra <- function(X, Y, donors) {
   # prepare data
@@ -234,12 +236,13 @@ varIntra <- function(X, Y, donors) {
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
-#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
-#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
+#' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
+#' hot-deck imputation for network inference from RNA sequencing data.
+#' \emph{Bioinformatics}. \doi{10.1093/bioinformatics/btx819}.}
 #'
 #' @details The average intra-donor pool variance is described in (Imbert
-#' \emph{et al.}, 2017).
+#' \emph{et al.}, 2018).
 #'
 #' @seealso \code{\link{varIntra}}
 #'
