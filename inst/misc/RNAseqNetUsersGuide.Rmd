@@ -1,13 +1,11 @@
 ---
 title: "Log-Linear Poisson Graphical Model with Hot-Deck Multiple Imputation"
 author:
-- name: Nathalie Villa-Vialaneix
+- name: Nathalie Vialaneix
   affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
 - name: Alyssa Imbert
   affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
 package: RNAseqNet

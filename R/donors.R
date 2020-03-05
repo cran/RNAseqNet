@@ -28,9 +28,9 @@
 #' \code{Y}. If rownames are not provided the missing rows in \code{X} are
 #' supposed to correspond to the last rows of \code{Y}.
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr} }
 #'
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
@@ -65,13 +65,15 @@ imputeHD <- function(X, Y, sigma, m = 50, seed = NULL) {
     warning("rownames are not provided: the first ", nrow(X),
             "rows of Y are supposed to correspond to rows of X")
     sample_miss <- c(1:nrow(X), rep(NA, nrow(Y) - nrow(X)))
-    merged_data <- data.frame("samples" = sample_miss, Y)
+    merged_data <- data.frame("samples" = sample_miss, Y,
+                              stringsAsFactors = TRUE)
   } else {
     s_size <- length(union(rownames(X), rownames(Y)))
     sample_miss <- c(intersect(rownames(X), rownames(Y)),
                      setdiff(rownames(Y), rownames(X)))
     merged_data <- data.frame("samples" = sample_miss,
-                              Y[match(sample_miss, rownames(Y)), ])
+                              Y[match(sample_miss, rownames(Y)), ],
+                              stringsAsFactors = TRUE)
     merged_data$samples[is.na(match(merged_data$samples, rownames(X)))] <- NA
   }
 
@@ -111,9 +113,9 @@ imputeHD <- function(X, Y, sigma, m = 50, seed = NULL) {
 #' @param object \code{HDImputed} object
 #' @param x \code{HDImputed} object
 #' @param ... not used
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @seealso \code{\link{imputeHD}}
 
@@ -144,13 +146,15 @@ createDonors <- function(X, Y, sigma, seed = NULL) {
     warning("rownames are not provided: the first ", nrow(X),
             "rows of Y are supposed to correspond to rows of X")
     sample_miss <- c(1:nrow(X), rep(NA, nrow(Y) - nrow(X)))
-    merged_data <- data.frame("samples" = sample_miss, Y)
+    merged_data <- data.frame("samples" = sample_miss, Y,
+                              stringsAsFactors = TRUE)
   } else {
     s_size <- length(union(rownames(X), rownames(Y)))
     sample_miss <- c(intersect(rownames(X), rownames(Y)),
                      setdiff(rownames(Y), rownames(X)))
     merged_data <- data.frame("samples" = sample_miss,
-                              Y[match(sample_miss, rownames(Y)), ])
+                              Y[match(sample_miss, rownames(Y)), ],
+                              stringsAsFactors = TRUE)
     merged_data$samples[is.na(match(merged_data$samples, rownames(X)))] <- NA
   }
 
@@ -176,9 +180,9 @@ createDonors <- function(X, Y, sigma, seed = NULL) {
 #' @param donors donor pool (a list, as given \code{$donors} obtained from the
 #' function \code{\link{imputeHD}})
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
@@ -232,9 +236,9 @@ varIntra <- function(X, Y, donors) {
 #' @param seed single value, interpreted as an in integer, used to initialize
 #' the random number generation state
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple

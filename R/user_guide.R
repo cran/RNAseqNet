@@ -11,9 +11,9 @@
 #' compiled PDF or the Rmd source. Default to \code{TRUE}
 #' @param view logical. Should the document be opened using the default HTML
 #' viewer? Default to \code{html}. It has no effect if \code{html = FALSE}
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @details The function \code{vignette("RNAseqNet")} will find the short
 #' RNAseqNet vignette that describes how to obtain the RNAseqNet User's Guide.
@@ -36,14 +36,14 @@
 
 RNAseqNetUsersGuide <- function(html = TRUE, view = html) {
   if (html) {
-    f <- system.file("doc", "RNAseqNetUsersGuide.html", package = "RNAseqNet")
+    f <- system.file("misc", "RNAseqNetUsersGuide.html", package = "RNAseqNet")
     if (view) {
       if (.Platform$OS.type == "windows")
-        shell.exec(f)
-      else browseURL(paste0("file://", f))
+        shell.exec(normalizePath(f))
+      else browseURL(paste0("file://", normalizePath(f)))
     }
   } else {
-    f <- system.file("doc", "RNAseqNetUsersGuide.Rmd", package = "RNAseqNet")
+    f <- system.file("misc", "RNAseqNetUsersGuide.Rmd", package = "RNAseqNet")
     if (view) {
       warning("'RNAseqNetUserGuide.Rmd' can not be viewed.
               However, the location of the file is returned by the function.",
