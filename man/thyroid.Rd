@@ -5,16 +5,16 @@
 \alias{thyroid}
 \title{RNA-seq expression from thyroid tissue (GTEx).}
 \format{
-a data frame with 221 rows and 50 variables (genes). Rownames are
+a data frame with 221 rows and 50 variables (genes). Rown ames are
 identifiers for individuals.
 }
 \source{
-The raw data were downloaded from \url{https://gtexportal.org/}. The
-TMM normalisation of RNA-seq expression was performed with the R package
-\code{edgeR}.
+The raw data were downloaded from
+\url{https://gtexportal.org/home/index.html}. The TMM normalisation of
+RNA-seq expression was performed with the R package \code{edgeR}.
 }
 \description{
-This data set is a small subset of the full data set from GTEx.  It contains
+This data set is a small subset of the full data set from GTEx. It contains
 RNA-seq expressions measured from thyroid tissue. The RNA-seq expressions
 have been normalized with the TMM method.
 }

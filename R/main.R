@@ -49,14 +49,12 @@
 #' }
 #'
 #' @return S3 object of class \code{HDpath}: a list consisting of
-#' \itemize{
 #'   \item{\code{path}}{ a list of \code{m} data frames, each containing the
 #'   adjacency matrix of the inferred network obtained from the corresonding
 #'   imputed dataset. The regularization parameter is selected by StARS}
 #'   \item{\code{efreq}}{ a numeric matrix of size p x p,  which indicates the
 #'   number of times an edge has been predicted among the \code{m} inferred
 #'   networks}
-#' }
 
 imputedGLMnetwork <- function(X, Y, sigma, m = 50, lambdas = NULL, B = 20) {
   # hot deck imputation

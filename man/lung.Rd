@@ -5,13 +5,13 @@
 \alias{lung}
 \title{RNA-seq expression from lung tissue (GTEx).}
 \format{
-a data frame with 221 rows and 100 variables (genes). Rownames are
+a data frame with 221 rows and 100 variables (genes). Row names are
 identifiers for individuals.
 }
 \source{
-The raw data were download from \url{https://gtexportal.org/}.
-The TMM normalisation of RNA-seq expression was performed with the R package
-\code{edgeR}.
+The raw data were download from
+\url{https://gtexportal.org/home/index.html}. The TMM normalization of
+RNA-seq expression was performed with the R package \code{edgeR}.
 }
 \description{
 This data set is a small subset of the full data set from GTEx.  It contains

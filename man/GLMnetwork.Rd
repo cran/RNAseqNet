@@ -19,11 +19,9 @@ performed prior the model is fit. Default to \code{TRUE}}
 }
 \value{
 S3 object of class \code{GLMnetwork}: a list consisting of
-\itemize{
   \item{\code{lambda}}{ regularization parameters used for LLGM path(vector)}
   \item{\code{path}}{ a list having the same length than \code{lambda}. It
   contains the estimated coefficients (in a matrix) along the path}
- }
 }
 \description{
 \code{GLMnetwork} infers a network from RNA-seq expression with the

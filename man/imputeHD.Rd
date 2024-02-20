@@ -22,13 +22,11 @@ case)}
 }
 \value{
 S3 object of class \code{HDImputed}: a list consisting of
-\itemize{
   \item{\code{donors}}{ a list. Each element of this list contains the donor
   pool for every missing observations}
   \item{\code{draws}}{ a data frame which indicates which donor was chosen
   for each missing samples}
   \item{\code{data}}{ a list of \code{m} imputed datasets}
-}
 }
 \description{
 \code{imputeHD} performs multiple hot-deck imputation on an input data frame

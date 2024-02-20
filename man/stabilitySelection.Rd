@@ -17,7 +17,6 @@ regularization (numeric vector). Default to \code{NULL}}
 }
 \value{
 S3 object of class \code{stabilitySelection} : a list consisting of
-\itemize{
   \item{\code{lambdas}}{ numeric regularization parameters used for
   regularization path}
   \item{\code{B}}{ number of iterations for stability selection}
@@ -25,7 +24,6 @@ S3 object of class \code{stabilitySelection} : a list consisting of
   in \code{lambdas}}
   \item{\code{variabilities}}{ numeric vector having same length than lambdas
   and providing the variability value as defined by StARS along the path}
-}
 }
 \description{
 \code{stabilitySelection} implements the regularization parameter selection

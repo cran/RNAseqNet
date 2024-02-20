@@ -43,11 +43,9 @@
 #' ref_lung <- GLMnetwork(lung, lambdas = lambdas)
 #'
 #' @return S3 object of class \code{GLMnetwork}: a list consisting of
-#' \itemize{
 #'   \item{\code{lambda}}{ regularization parameters used for LLGM path(vector)}
 #'   \item{\code{path}}{ a list having the same length than \code{lambda}. It
 #'   contains the estimated coefficients (in a matrix) along the path}
-#'  }
 
 GLMnetwork <- function(counts, lambdas = NULL, normalize = TRUE) {
   nvar <- ncol(counts)
@@ -159,7 +157,6 @@ print.GLMpath <- function(x, ...) {
 #' \dontrun{plot(stability_lung)}
 #'
 #' @return S3 object of class \code{stabilitySelection} : a list consisting of
-#' \itemize{
 #'   \item{\code{lambdas}}{ numeric regularization parameters used for
 #'   regularization path}
 #'   \item{\code{B}}{ number of iterations for stability selection}
@@ -167,7 +164,6 @@ print.GLMpath <- function(x, ...) {
 #'   in \code{lambdas}}
 #'   \item{\code{variabilities}}{ numeric vector having same length than lambdas
 #'   and providing the variability value as defined by StARS along the path}
-#' }
 
 stabilitySelection <- function(counts, lambdas = NULL, B = 20) {
   nvar <- ncol(counts)

@@ -1,26 +1,14 @@
-citHeader("To cite the 'RNAseqNet' package in publications, use:")
-
-year = sub('.*(2[[:digit:]]{3})-.*', '\\1', meta$Date, perl = TRUE)
-vers = paste('R package version', meta$Version)
-
-citEntry(
-  entry = 'manual',
-  title = paste('RNAseqNet:', meta$Title),
-  author = as.person(meta$Author),
-  year = year,
-  note = vers,
-  textVersion = paste('Villa-Vialaneix N., Imbert A. (', year, ') RNAseqNet: ', meta$Title, '. ', vers, '.', sep = '')
-)
-
-citEntry(
-  entry = 'article',
-  title = 'Multiple hot-deck imputation for network inference from RNA sequencing data',
-  author = personList(as.person("Alyssa Imbert"), as.person("Armand Valsesia"), as.person("Caroline Le Gall"), as.person("Claudia Armenise"), as.person("Gregory Lefebvre"), as.person("Pierre-Antoine Gourraud"), as.person("Nathalie Viguerie"), as.person("Nathalie Villa-Vialaneix")),
-  journal = 'Bioinformatics',
-  doi = '10.1093/bioinformatics/btx819',
-  year = '2018',
-
-  textVersion = paste('Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre, G., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018)',
-                      'Multiple hot-deck imputation for network inference from RNA sequencing data.',
-                      'Bioinformatics. DOI: 10.1093/bioinformatics/btx819.')
+bibentry(
+  bibtype = "Article",
+  title = "Multiple hot-deck imputation for network inference from RNA sequencing data",
+  author = "Alyssa Imber, Armand Valsesia, Caroline Le Gall, Claudia Armenise, Gregory Lefebvre, Pierre-Antoine Gourraud, Nathalie Viguerie, Nathalie Villa-Vialaneix",
+  journal = "Bioinformatics",
+  doi = "10.1093/bioinformatics/btx819",
+  year = "2018",
+  volume = "34",
+  issue = "10",
+  pages = "1726-1732",
+  textVersion = paste("Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre, G., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018)",
+                      "Multiple hot-deck imputation for network inference from RNA sequencing data.",
+                      "Bioinformatics, 34(10), 1726-1732. DOI: 10.1093/bioinformatics/btx819.")
 )

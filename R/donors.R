@@ -49,13 +49,11 @@
 #' imputed_lung <- imputeHD(lung, thyroid, sigma = 2)
 #'
 #' @return S3 object of class \code{HDImputed}: a list consisting of
-#' \itemize{
 #'   \item{\code{donors}}{ a list. Each element of this list contains the donor
 #'   pool for every missing observations}
 #'   \item{\code{draws}}{ a data frame which indicates which donor was chosen
 #'   for each missing samples}
 #'   \item{\code{data}}{ a list of \code{m} imputed datasets}
-#' }
 
 imputeHD <- function(X, Y, sigma, m = 50, seed = NULL) {
   if (!is.null(seed)) set.seed(seed)
